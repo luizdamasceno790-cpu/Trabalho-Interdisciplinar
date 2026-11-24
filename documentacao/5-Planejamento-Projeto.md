@@ -34,3 +34,7 @@ O backend possui testes automatizados para autenticação, pedidos, regras de st
 A reunião da entrega foi realizada em 31 de outubro de 2026, de 15:00 às 17:50, em formato remoto. Todos os integrantes estiveram presentes.
 
 Na reunião, o grupo aprovou a aplicação, o documento de evidências e a publicação do código no GitHub. Também definiu a demonstração em sala e a validação futura da solução com a proprietária.
+
+## 5.6 Apresentação da modelagem
+
+Na Tarefa 03, o grupo apresentou o contexto da confeitaria, o levantamento realizado, os processos AS-IS e TO-BE em BPMN 2.0, os gargalos G1 a G8, as intervenções propostas e os próximos passos.

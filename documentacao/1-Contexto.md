@@ -35,3 +35,5 @@ Os principais processos atendidos são:
 
 1. Venda por delivery, incluindo pedidos, clientes, produtos, promoções, pagamentos e mensagens pelo WhatsApp.
 2. Gestão de estoque e reposição de ingredientes, incluindo receitas, produção e compras.
+
+A apresentação da modelagem AS-IS e TO-BE está disponível em [APRESENTAÇÃOOOOO.pdf](../apresentacao/APRESENTA%C3%87%C3%83OOOOO.pdf).
