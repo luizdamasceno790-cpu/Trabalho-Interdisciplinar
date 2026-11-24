@@ -20,3 +20,15 @@ Em paralelo, o sistema apresenta saldo e validade de ingredientes, gera necessid
 - A produção só é liberada quando há estoque suficiente.
 - Cancelamentos exigem motivo e são limitados até etapas permitidas.
 - Pedidos finalizados não podem voltar para etapas anteriores.
+
+## 3.4 Processo 1: Venda por delivery
+
+O processo inicia com o atendimento pelo WhatsApp, Instagram, iFood ou 99Food. O pedido é associado ao cliente, aos itens e, quando aplicável, à promoção. O pagamento pode ser confirmado manualmente por Pix. Em seguida, o pedido percorre as etapas previstas até a entrega.
+
+As mensagens de atendimento são montadas pelo sistema a partir de modelos configuráveis e abertas no WhatsApp.
+
+## 3.5 Processo 2: Gestão de estoque e reposição
+
+Os ingredientes possuem saldo atual, estoque mínimo e validade mais próxima. Entradas e ajustes alteram o estoque, que é consultado pelo planejamento da produção. Ao liberar uma produção, o sistema confere as fichas técnicas e dá baixa nos ingredientes.
+
+A lista de compras é gerada automaticamente para ingredientes abaixo do mínimo ou ausentes no planejamento. Cotação, compra e recebimento são registrados no fluxo de reposição.

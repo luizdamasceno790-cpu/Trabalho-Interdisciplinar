@@ -31,3 +31,11 @@ O backend protege rotas com token JWT, exceto o endpoint de login. Senhas são a
 - Estoque e compras.
 - Receitas e produção.
 - Painel e indicadores.
+
+## 4.5 Evidências da implementação
+
+A aplicação entregue contempla telas de login, painel, pedidos, clientes, cardápio, promoções, estoque, receitas, produção, compras e configurações.
+
+O banco SQLite contém 19 tabelas relacionadas. Os registros principais incluem clientes, pedidos, itens, histórico de status, produtos, ingredientes, receitas, compras e usuários.
+
+Os testes automatizados cobrem autenticação, cadastros básicos, fluxo completo de pedidos, regras de status, estoque, produção, compras, promoções e painel.

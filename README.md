@@ -36,6 +36,11 @@ Consulte [COMO-INSTALAR.md](./COMO-INSTALAR.md) para instalar as dependências, 
 
 As credenciais iniciais podem ser configuradas no arquivo `codigo-fonte/backend/.env`. Um modelo está disponível em `codigo-fonte/backend/.env.example`.
 
+## Evidências e ata da Atividade 4
+
+- [Documento completo com evidências e Ata nº 04](./documentacao/Atividade4_Doces_da_Lice_Evidencias_e_Ata.pdf)
+- [Resumo da ata da reunião](./documentacao/Ata-Reuniao-04.md)
+
 ## Documentação
 
 1. [Documentação de Contexto](./documentacao/1-Contexto.md)
@@ -59,6 +64,11 @@ As credenciais iniciais podem ser configuradas no arquivo `codigo-fonte/backend/
 - [Apresentação da solução](./apresentacao/)
 
 ## Histórico de versões
+
+### 0.1.2
+
+- Inclusão das evidências da aplicação e da Ata nº 04.
+- Atualização da documentação com os processos, tecnologias, divisão das atividades e limitações registrados pelo grupo.
 
 ### 0.1.1
 

@@ -17,3 +17,9 @@ O painel apresenta indicadores relacionados a:
 - Cobertura dos fluxos principais.
 - Ocorrências de transições inválidas de status.
 - Ocorrências de tentativa de produção sem estoque suficiente.
+
+## 7.3 Evidências registradas
+
+Na evidência da Atividade 4, o painel demonstrou dois ingredientes abaixo do mínimo: coco ralado e creme de leite. Também foi registrado um pedido no valor de R$ 13,50, associado ao cliente João Exemplo.
+
+O banco de dados demonstra os dados utilizados nos testes, inclusive cliente, pedido, item, histórico de status, produtos, ingredientes, receitas, compras e usuário administrador.

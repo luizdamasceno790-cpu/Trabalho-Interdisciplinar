@@ -10,3 +10,7 @@ O projeto Doces da Lice apresentou uma solução integrada para pedidos, estoque
 - Controle de estoque por lote e validade.
 - Relatórios e exportação de dados.
 - Implantação em ambiente de produção com banco gerenciado.
+
+## 8.2 Validação necessária
+
+Os dados utilizados na demonstração são fictícios e precisam ser validados pela proprietária Alice Mello antes de uso real. O WhatsApp permanece semiautomático, e a confirmação do Pix exige conferência manual no aplicativo do banco.

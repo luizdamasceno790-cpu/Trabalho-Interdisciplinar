@@ -25,4 +25,13 @@ A solução automatiza controles repetitivos e mantém em um único ambiente os 
 
 ## 1.4 Público-alvo
 
-O público principal é formado pela administradora da Doces da Lice e pelos membros responsáveis pelo atendimento, produção e controle de estoque.
+O público principal é formado pela proprietária da Doces da Lice, Alice Mello, pela administradora responsável pelo atendimento e pelos membros responsáveis pela produção e pelo controle de estoque.
+
+## 1.5 Produto entregue
+
+A aplicação foi desenvolvida entre 1 de outubro e 1 de novembro de 2026 e entregue como um minissistema web composto por interface React, API REST em Node.js e banco SQLite.
+
+Os principais processos atendidos são:
+
+1. Venda por delivery, incluindo pedidos, clientes, produtos, promoções, pagamentos e mensagens pelo WhatsApp.
+2. Gestão de estoque e reposição de ingredientes, incluindo receitas, produção e compras.
