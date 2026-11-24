@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "Doces da Lice"
+message: "Se usar este projeto em publicação ou apresentação, cite-o."
+type: software
+authors:
+  - family-names: "Simões"
+    given-names: "Pedro Henrique Felisberto"
+  - family-names: "Ferreira"
+    given-names: "Lucas de Freitas"
+  - family-names: "Fernandes"
+    given-names: "João Vitor Ferreira"
+  - family-names: "Campelo"
+    given-names: "Gabriel da Silva"
+  - family-names: "Damasceno"
+    given-names: "Luiz Felipe de Souza"
+date-released: "2026-11-24"

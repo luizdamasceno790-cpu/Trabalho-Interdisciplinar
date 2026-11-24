@@ -3,3 +3,4 @@ node_modules
 dist
 *.db
 backend/data/
+codigo-fonte/backend/data/

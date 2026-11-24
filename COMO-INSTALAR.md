@@ -1,16 +1,57 @@
-# Como colocar este projeto no repositório (passo a passo)
+# Como instalar e executar o projeto
 
-Esta pasta tem `backend/`, `frontend/`, `README.md` e `.gitignore`. Faça no PC de quem tem o repositório `TI` (Luiz).
+## Requisitos
 
-1. Feche o servidor do Vite se estiver rodando (Ctrl + C no terminal).
-2. Na pasta `TI`, **apague a pasta `frontend`** que o Vite criou (o `frontend` deste pacote é o completo).
-3. Copie para dentro da pasta `TI`: as pastas `backend` e `frontend`, o `README.md` e o `.gitignore` (aceite substituir os dois arquivos).
-4. No terminal do VS Code, dentro da pasta `TI`, confira que está na branch `feature/front-base`:  `git branch`
-5. Envie tudo:
-   ```
-   git add .
-   git commit -m "feat: sistema completo (api e telas)"
-   git push -u origin feature/front-base
-   ```
-6. No GitHub, abra o pull request de `feature/front-base` para `develop` e faça o merge. Depois, o grupo faz `git checkout develop` e `git pull`.
-7. Para rodar, siga o `README.md` (seção "Como rodar").
+- Node.js 22.13 ou versão mais recente.
+- Navegador web atual.
+- Git para obter o repositório.
+
+Não é necessário instalar Docker ou um servidor de banco de dados separado.
+
+## Instalação
+
+Abra dois terminais na raiz do repositório.
+
+### Terminal 1 - API
+
+```bat
+cd codigo-fonte\backend
+npm install
+npm run seed
+npm run dev
+```
+
+A API ficará disponível em `http://localhost:3000`.
+
+### Terminal 2 - interface
+
+```bat
+cd codigo-fonte\frontend
+npm install
+npm run dev
+```
+
+A interface ficará disponível em `http://localhost:5173`.
+
+## Login de teste
+
+- Usuário: `admin@doces.com`
+- Senha: `admin123`
+
+## Executar a aplicação integrada
+
+```bat
+cd codigo-fonte\frontend
+npm run build
+cd ..\backend
+npm start
+```
+
+Depois, abra `http://localhost:3000`.
+
+## Executar os testes
+
+```bat
+cd codigo-fonte\backend
+npm test
+```

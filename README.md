@@ -1,70 +1,74 @@
-# Doces da Lice — minissistema web
+# Doces da Lice
 
-Sistema web para a gestão de **pedidos** e a **divulgação** da Doces da Lice, integrado ao WhatsApp, com controle de **estoque, receitas, produção e compras**. Foi construído a partir das modelagens AS-IS e TO-BE do Trabalho Interdisciplinar (PUC Minas).
+## Curso
 
-## O que o sistema faz
+Sistemas de Informação
 
-- **Pedidos:** cadastro com canal (WhatsApp, Instagram, iFood ou 99Food) e promoção; status do pedido (aguardando pagamento, pago, em preparo, conferido, saiu para entrega, entregue, cancelado); confirmação manual do Pix; checklist de conferência; etiqueta para imprimir; histórico.
-- **WhatsApp:** o sistema monta a mensagem de cada etapa e abre o WhatsApp com o texto pronto (a pessoa só aperta enviar). Não há envio automático.
-- **Divulgação:** promoções, texto de divulgação pronto para o WhatsApp e o Instagram (copiar e colar) e pedidos por promoção no painel.
-- **Estoque:** ingredientes com saldo, mínimo, validade mais próxima, entradas, ajustes e histórico.
-- **Receitas e produção:** ficha técnica por produto; planejamento da produção com checagem de estoque antes de liberar; baixa automática dos ingredientes; produtos em pronta entrega.
-- **Compras:** lista de compras automática (estoque baixo ou falta na produção), cotação e recebimento.
-- **Painel:** números do dia, alertas de estoque e validade, pedidos por promoção.
+## Disciplina
 
-A entrega é feita por Uber chamado **pelo cliente**; o sistema não chama entregador nem cobra taxa de entrega.
+Trabalho Interdisciplinar
 
-## Como rodar (Windows, macOS ou Linux)
+## Semestre
 
-Requisitos: **Node.js 22.13 ou mais novo** (o projeto usa o SQLite embutido do Node; não precisa instalar banco de dados nem Docker).
+2026/2
 
-```
-# Terminal 1 - API
-cd backend
-npm install
-npm run seed      # cria dados de exemplo (só na primeira vez)
-npm run dev       # sobe em http://localhost:3000
+## Descrição resumida
 
-# Terminal 2 - telas
-cd frontend
-npm install
-npm run dev       # abra http://localhost:5173
-```
+O projeto Doces da Lice é um sistema web para gestão de pedidos e divulgação de produtos de uma confeitaria. A solução integra o atendimento pelo WhatsApp ao controle de estoque, receitas, produção, compras, promoções e clientes.
 
-Login de teste: **admin@doces.com** / **admin123** (troque no arquivo `backend/.env`; veja `backend/.env.example`).
+O sistema foi desenvolvido a partir da análise dos processos atuais e futuros da empresa, transformando etapas manuais em um fluxo digital organizado, com mensagens prontas para o WhatsApp e indicação dos próximos status de cada pedido.
 
-### Rodar tudo em um comando só (para a apresentação)
+## Integrantes
 
-```
-cd frontend
-npm run build
-cd ../backend
-npm start         # abra http://localhost:3000
-```
+- Pedro Henrique Felisberto Simões
+- Lucas de Freitas Ferreira
+- João Vitor Ferreira Fernandes
+- Gabriel da Silva Campelo
+- Luiz Felipe de Souza Damasceno
 
-## Testes
+## Orientador
 
-```
-cd backend
-npm test
-```
+- Gleisson Albergaria Amaral
 
-Os testes cobrem as regras de status do pedido, o fluxo completo de um pedido, estoque, produção, compras, promoções e painel.
+## Instruções de utilização
 
-## Estrutura
+Consulte [COMO-INSTALAR.md](./COMO-INSTALAR.md) para instalar as dependências, iniciar a aplicação e executar os testes.
 
-```
-backend/    API em Node.js + Express, banco SQLite (arquivo em backend/data)
-frontend/   telas em React + Vite + TypeScript
-```
+As credenciais iniciais podem ser configuradas no arquivo `codigo-fonte/backend/.env`. Um modelo está disponível em `codigo-fonte/backend/.env.example`.
 
-Contrato da API: prefixo `/api/v1`; erros no formato `{ erro: { codigo, mensagem, detalhes } }`; todas as rotas, menos o login, exigem `Authorization: Bearer <token>`.
+## Documentação
 
-## Limitações conhecidas
+1. [Documentação de Contexto](./documentacao/1-Contexto.md)
+2. [Especificação do Projeto](./documentacao/2-Especificacao.md)
+3. [Modelagem dos Processos de Negócio](./documentacao/3-Modelagem-Processos-Negocio.md)
+4. [Projeto da Solução](./documentacao/4-Projeto-Solucao.md)
+5. [Planejamento do Projeto](./documentacao/5-Planejamento-Projeto.md)
+6. [Interface do Sistema](./documentacao/6-Interface-Sistema.md)
+7. [Indicadores](./documentacao/7-Indicadores.md)
+8. [Conclusão](./documentacao/8-Conclusao.md)
+9. [Referências](./documentacao/9-Referencias.md)
 
-- Há um único usuário administrador.
-- As listas não têm paginação (o volume de uma confeitaria pequena não exige).
-- O WhatsApp é semiautomático (abre a mensagem pronta). O envio automático exigiria a API oficial, com conta empresarial e custos.
-- O Pix é conferido manualmente no aplicativo do banco.
-- O estoque guarda só a **validade mais próxima** de cada ingrediente (não controla lote por lote).
-- O Node avisa que o SQLite é "experimental" ao iniciar; é só um aviso.
+## Código
+
+- [Código-fonte](./codigo-fonte/)
+- Backend: Node.js, Express e SQLite.
+- Frontend: React, Vite e TypeScript.
+
+## Apresentação
+
+- [Apresentação da solução](./apresentacao/)
+
+## Histórico de versões
+
+### 0.1.1
+
+- Atualização da documentação e reorganização do repositório conforme o padrão solicitado.
+- Sistema completo mantido no diretório `codigo-fonte`.
+
+### 0.1.0
+
+- Implementação do fluxo de pedidos, produção, estoque, compras, promoções e painel.
+
+### 0.0.1
+
+- Início da modelagem do processo de negócio.
