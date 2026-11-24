@@ -66,3 +66,10 @@ export const STATUS: Record<string, { rotulo: string; cor: string }> = {
 export const CANAIS = [
   { v: 'WHATSAPP', r: 'WhatsApp' }, { v: 'INSTAGRAM', r: 'Instagram' }, { v: 'IFOOD', r: 'iFood' }, { v: '99FOOD', r: '99Food' },
 ];
+
+// Mostra o telefone salvo (55 + DDD + número) no formato (11) 98888-7777.
+export const fone = (t?: string | null) => {
+  const d = String(t || '').replace(/\D/g, '').replace(/^55(?=\d{10,11}$)/, '');
+  const m = d.match(/^(\d{2})(\d{4,5})(\d{4})$/);
+  return m ? `(${m[1]}) ${m[2]}-${m[3]}` : (t || '');
+};

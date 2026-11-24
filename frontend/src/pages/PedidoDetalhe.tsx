@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { api, brl, CANAIS, dataHoraBR, STATUS, useDados } from '../api';
+import { api, brl, fone, CANAIS, dataHoraBR, STATUS, useDados } from '../api';
 import { Campo, Carregando, Erro, Selo, Tela, TextoPronto } from '../ui';
 
 const PROXIMO: Record<string, { para: string; rotulo: string }> = {
@@ -46,7 +46,7 @@ export default function PedidoDetalhe() {
       <Erro texto={erroAcao} />
       <div className="card">
         <h3>{p.cliente.nome}</h3>
-        <p className="muted" style={{ margin: 0 }}>{p.cliente.telefone} · {p.cliente.endereco || 'sem endereço'}</p>
+        <p className="muted" style={{ margin: 0 }}>{fone(p.cliente.telefone)} · {p.cliente.endereco || 'sem endereço'}</p>
         <p className="muted" style={{ margin: '.25rem 0 0' }}>Canal: {CANAIS.find((c) => c.v === p.canal)?.r} · Criado em {dataHoraBR(p.criadoEm)}{p.promocao ? ` · Promoção: ${p.promocao.titulo}` : ''}</p>
         {p.status === 'CANCELADO' && <p className="erro">Cancelado: {p.motivoCancelamento}</p>}
       </div>

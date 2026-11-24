@@ -27,12 +27,16 @@ r.get('/:id/texto', (req, res) => {
   const p = get('SELECT * FROM promocoes WHERE id=?', req.params.id);
   if (!p) throw erro404('Promoção não encontrada.');
   const c = config();
-  const linhas = [`🍬 *${p.titulo}* | ${c.nomeNegocio || 'Doces da Lice'}`, ''];
-  if (p.descricao) linhas.push(p.descricao, '');
-  if (p.condicao) linhas.push(`✔ ${p.condicao}`);
-  if (p.inicio || p.fim) linhas.push(`📅 ${p.inicio ? 'De ' + dataBR(p.inicio) : ''}${p.fim ? ' até ' + dataBR(p.fim) : ''}`.trim());
-  linhas.push('', 'Peça pelo WhatsApp' + (c.telefoneNegocio ? `: ${c.telefoneNegocio}` : '!'));
-  const texto = linhas.join('\n');
-  res.json({ texto, whatsappUrl: `https://wa.me/?text=${encodeURIComponent(texto)}` });
+  // Monta o texto; no WhatsApp o negrito usa *asteriscos*, no Instagram o texto vai sem marcações.
+  const monta = (insta) => {
+    const linhas = [`🍬 ${insta ? p.titulo : `*${p.titulo}*`} | ${c.nomeNegocio || 'Doces da Lice'}`, ''];
+    if (p.descricao) linhas.push(p.descricao, '');
+    if (p.condicao) linhas.push(`✔ ${p.condicao}`);
+    if (p.inicio || p.fim) linhas.push(`📅 ${p.inicio ? 'De ' + dataBR(p.inicio) : ''}${p.fim ? ' até ' + dataBR(p.fim) : ''}`.trim());
+    linhas.push('', (insta ? 'Peça pelo direct ou WhatsApp' : 'Peça pelo WhatsApp') + (c.telefoneNegocio ? `: ${c.telefoneNegocio}` : '!'));
+    return linhas.join('\n');
+  };
+  const texto = monta(false);
+  res.json({ texto, textoInstagram: monta(true), whatsappUrl: `https://wa.me/?text=${encodeURIComponent(texto)}` });
 });
 export default r;

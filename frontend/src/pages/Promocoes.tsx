@@ -29,13 +29,14 @@ export default function Promocoes() {
               <div className="muted" style={{ fontSize: '.88rem' }}>{p.condicao || 'sem condição'} · {dataBR(p.inicio)} a {dataBR(p.fim)}</div>
             </div>
             <div className="acoes">
-              <button className="btn pequeno principal" onClick={async () => setTexto(await api('GET', `/promocoes/${p.id}/texto`))}>Gerar texto</button>
+              <button className="btn pequeno principal" onClick={async () => { const r = await api('GET', `/promocoes/${p.id}/texto`); setTexto({ titulo: 'Texto para WhatsApp', texto: r.texto, whatsappUrl: r.whatsappUrl }); }}>Texto WhatsApp</button>
+              <button className="btn pequeno" onClick={async () => { const r = await api('GET', `/promocoes/${p.id}/texto`); setTexto({ titulo: 'Texto para Instagram', texto: r.textoInstagram }); }}>Texto Instagram</button>
               <button className="btn pequeno" onClick={() => { setErroForm(''); setEdit(p); }}>Editar</button>
             </div>
           </div>
         ))}
       </div>
-      {texto && <TextoPronto titulo="Texto de divulgação" texto={texto.texto} whatsappUrl={texto.whatsappUrl} onFechar={() => setTexto(null)} />}
+      {texto && <TextoPronto titulo={texto.titulo} texto={texto.texto} whatsappUrl={texto.whatsappUrl} onFechar={() => setTexto(null)} />}
       {edit && (
         <Modal titulo={edit.id ? 'Editar promoção' : 'Nova promoção'} onFechar={() => setEdit(null)}>
           <form onSubmit={salvar}>

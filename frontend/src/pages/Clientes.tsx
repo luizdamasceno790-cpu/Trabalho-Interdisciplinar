@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import { api, useDados } from '../api';
+import { api, fone, useDados } from '../api';
 import { Campo, Carregando, Erro, Modal, Tela, Vazio } from '../ui';
 
 const VAZIO = { nome: '', telefone: '', endereco: '', observacoes: '' };
@@ -25,7 +25,7 @@ export default function Clientes() {
         {dados && dados.itens.length === 0 && <Vazio texto="Nenhum cliente cadastrado." />}
         {dados?.itens.map((c: any) => (
           <div className="item-lista" key={c.id}>
-            <div><b>{c.nome}</b><div className="muted" style={{ fontSize: '.88rem' }}>{c.telefone} · {c.endereco || 'sem endereço'}</div></div>
+            <div><b>{c.nome}</b><div className="muted" style={{ fontSize: '.88rem' }}>{fone(c.telefone)} · {c.endereco || 'sem endereço'}</div></div>
             <button className="btn pequeno" onClick={() => { setErroForm(''); setEdit(c); }}>Editar</button>
           </div>
         ))}
