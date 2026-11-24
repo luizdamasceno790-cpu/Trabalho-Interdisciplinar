@@ -20,6 +20,6 @@ O painel apresenta indicadores relacionados a:
 
 ## 7.3 Evidências registradas
 
-Na evidência da Atividade 4, o painel demonstrou dois ingredientes abaixo do mínimo: coco ralado e creme de leite. Também foi registrado um pedido no valor de R$ 13,50, associado ao cliente João Exemplo.
+Nas evidências da Atividade 4, o painel demonstrou dois ingredientes abaixo do mínimo: coco ralado e creme de leite. Também foi registrado um pedido no valor de R$ 13,50 durante o teste do fluxo.
 
 O banco de dados demonstra os dados utilizados nos testes, inclusive cliente, pedido, item, histórico de status, produtos, ingredientes, receitas, compras e usuário administrador.

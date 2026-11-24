@@ -40,6 +40,8 @@ As credenciais iniciais podem ser configuradas no arquivo `codigo-fonte/backend/
 
 - [Documento completo com evidências e Ata nº 04](./documentacao/Atividade4_Doces_da_Lice_Evidencias_e_Ata.pdf)
 - [Resumo da ata da reunião](./documentacao/Ata-Reuniao-04.md)
+- [Entrega da Tarefa 1](./documentacao/Parte-1-Trabalho-Interdisciplinar.pdf)
+- [Entrega da Tarefa 3 com os diagramas](./documentacao/Entrega-Tarefa-3-com-diagramas.pdf)
 
 ## Documentação
 
@@ -65,6 +67,11 @@ As credenciais iniciais podem ser configuradas no arquivo `codigo-fonte/backend/
 - [Pasta de apresentação](./apresentacao/)
 
 ## Histórico de versões
+
+### 0.1.3
+
+- Inclusão das entregas oficiais das Tarefas 1 e 3 no repositório.
+- Complementação dos links de documentação acadêmica no README.
 
 ### 0.1.2
 
